@@ -6,12 +6,12 @@
 // Project Lead - Stuart Lodge, @slodge, me@slodge.com
 
 using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Application;
 using Cirrious.MvvmCross.Binding.Binders;
 using MyApplication.Core;
 using MyApplication.Core.Converters;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace MyApplication.UI.Touch
 {
@@ -23,7 +23,7 @@ namespace MyApplication.UI.Touch
         {
         }
 
-        protected override MvxApplication CreateApp()
+        protected override IMvxApplication CreateApp()
         {
             var app = new App();
             return app;
