@@ -1,51 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Cirrious.CrossCore.IoC;
-using Cirrious.MvvmCross.Application;
+﻿using Cirrious.CrossCore.IoC;
 using Cirrious.MvvmCross.ViewModels;
-using MyApplication.Core.ApplicationObjects;
-using MyApplication.Core.Interfaces.Errors;
-using MyApplication.Core.Interfaces.First;
-using MyApplication.Core.Services;
+using MyApplication.Core.Services.Error;
+using MyApplication.Core.Services.First;
+using MyApplication.Core.ViewModels;
 
 namespace MyApplication.Core
 {
     public class App
         : MvxApplication
-        
     {
-        public App()
+        public override void Initialize()
         {
-            InitaliseErrorReporting();
+            AppTrace.Trace("App initializing");
+            base.Initialize();
+
             InitialisePlugins();
             InitaliseServices();
             InitialiseStartNavigation();
+
+            AppTrace.Trace("App initialization complete");
+        }
+
+        private void InitialisePlugins()
+        {
+            AppTrace.Trace("Initialising plugins");
+            // initialise any plugins where are required at app startup
+            // e.g. Cirrious.MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
+            Cirrious.MvvmCross.Plugins.Messenger.PluginLoader.Instance.EnsureLoaded();
+        }
+
+        private void InitaliseServices()
+        {
+            AppTrace.Trace("Initialising services");
+            InitaliseErrorReporting();
+            InitialiseFirstService();
         }
 
         private void InitaliseErrorReporting()
         {
-            var errorService = new ErrorApplicationObject();
-            Mvx.RegisterSingleton<IErrorReporter>(errorService);
-            Mvx.RegisterSingleton<IErrorSource>(errorService);
+            var errorService = Mvx.IocConstruct<ErrorService>();
+            Mvx.RegisterSingleton<IErrorService>(errorService);
         }
 
-        private void InitaliseServices()
+        private static void InitialiseFirstService()
         {
             Mvx.RegisterSingleton<IFirstService>(new FirstService());
         }
 
         private void InitialiseStartNavigation()
         {
-            var startApplicationObject = new StartNavigation();
-            Mvx.RegisterSingleton<IMvxStartNavigation>(startApplicationObject);
-        }
-
-        private void InitialisePlugins()
-        {
-            // initialise any plugins where are required at app startup
-            // e.g. Cirrious.MvvmCross.Plugins.Visibility.PluginLoader.Instance.EnsureLoaded();
+            AppTrace.Trace("Initialising start navigation");
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<HomeViewModel>());
         }
     }
 }

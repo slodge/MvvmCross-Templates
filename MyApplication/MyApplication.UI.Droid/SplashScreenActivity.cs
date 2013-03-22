@@ -11,11 +11,6 @@ namespace MyApplication.UI.Droid
             : base(Resource.Layout.SplashScreen)
         {
         }
-
-        protected override void OnViewModelSet()
-        {
-            // ignored
-        }
     }
 }
 

@@ -1,4 +1,4 @@
-namespace MyApplication.Core.Interfaces.First
+namespace MyApplication.Core.Services.First
 {
     public enum FirstServiceError
     {

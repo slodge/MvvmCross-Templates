@@ -1,19 +1,18 @@
-﻿using Cirrious.CrossCore.Plugins;
-using Cirrious.MvvmCross.Application;
-using Cirrious.MvvmCross.WinRT.Platform;
+﻿using Cirrious.MvvmCross.ViewModels;
+using Cirrious.MvvmCross.WindowsStore.Platform;
 using Windows.UI.Xaml.Controls;
 
-namespace MyApplication.UI.WinRT
+namespace MyApplication.UI.WindowsStore
 {
     public class Setup
-        : MvxWinRTSetup
+        : MvxStoreSetup
     {
         public Setup(Frame rootFrame)
             : base(rootFrame)
         {
         }
 
-        protected override MvxApplication CreateApp()
+        protected override IMvxApplication CreateApp()
         {
             var app = new MyApplication.Core.App();
             return app;
@@ -21,8 +20,7 @@ namespace MyApplication.UI.WinRT
 
         protected override void InitializeLastChance()
         {
-            var errorDisplayer = new ErrorDisplayer();
-
+            var errorDisplayer = new ErrorDisplay();
             base.InitializeLastChance();
         }
     }

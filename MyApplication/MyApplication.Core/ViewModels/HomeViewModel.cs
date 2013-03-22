@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using Cirrious.CrossCore.IoC;
 using Cirrious.MvvmCross.ViewModels;
-using MyApplication.Core.Interfaces.First;
+using MyApplication.Core.Services.First;
 
 namespace MyApplication.Core.ViewModels
 {

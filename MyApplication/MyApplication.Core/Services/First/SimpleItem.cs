@@ -1,6 +1,6 @@
 using System;
 
-namespace MyApplication.Core.Interfaces.First
+namespace MyApplication.Core.Services.First
 {
     public class SimpleItem
     {

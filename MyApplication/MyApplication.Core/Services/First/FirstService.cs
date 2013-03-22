@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using MyApplication.Core.Interfaces.First;
 
-namespace MyApplication.Core.Services
+namespace MyApplication.Core.Services.First
 {
     public class FirstService : IFirstService
     {

@@ -1,6 +1,6 @@
-using Cirrious.MvvmCross.WinRT.Platform.Converters;
+using Cirrious.CrossCore.WindowsStore.Converters;
 
-namespace MyApplication.UI.WinRT.NativeConverters
+namespace MyApplication.UI.WindowsStore.NativeConverters
 {
     public class TimeAgoConverter : MvxNativeValueConverter<Core.Converters.TimeAgoConverter>
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MyApplication.Core.Interfaces.First
+namespace MyApplication.Core.Services.First
 {
     public interface IFirstService
     {

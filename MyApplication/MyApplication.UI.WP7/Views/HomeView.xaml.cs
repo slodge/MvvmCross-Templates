@@ -3,8 +3,8 @@ using MyApplication.Core.ViewModels;
 
 namespace MyApplication.UI.WP7.Views
 {
-    public partial class HomeView 
-        : MvxPhonePage
+    public partial class HomeView
+        : BaseView
     {
         public new HomeViewModel ViewModel
         {

@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\libs\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -46,18 +49,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="ApplicationObjects\ErrorApplicationObject.cs" />
+    <Compile Include="AppTrace.cs" />
+    <Compile Include="Messages\BaseMessage.cs" />
+    <Compile Include="Messages\ErrorMessage.cs" />
+    <Compile Include="Services\Error\ErrorService.cs" />
     <Compile Include="Converters\Converters.cs" />
     <Compile Include="Converters\TimeAgoConverter.cs" />
-    <Compile Include="Interfaces\Errors\ErrorEventArgs.cs" />
-    <Compile Include="Interfaces\First\FirstServiceError.cs" />
-    <Compile Include="Interfaces\Errors\IErrorReporter.cs" />
-    <Compile Include="Interfaces\Errors\IErrorSource.cs" />
-    <Compile Include="Interfaces\First\IFirstService.cs" />
-    <Compile Include="Interfaces\First\SimpleItem.cs" />
+    <Compile Include="Services\First\FirstServiceError.cs" />
+    <Compile Include="Services\Error\IErrorService.cs" />
+    <Compile Include="Services\First\IFirstService.cs" />
+    <Compile Include="Services\First\SimpleItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\FirstService.cs" />
-    <Compile Include="ApplicationObjects\StartNavigation.cs" />
+    <Compile Include="Services\First\FirstService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>

@@ -1,14 +1,11 @@
-
 using Android.App;
-using Cirrious.MvvmCross.Binding.Droid.Views;
-using Cirrious.MvvmCross.Droid.Views;
 using MyApplication.Core.ViewModels;
 
 namespace MyApplication.UI.Droid.Views
 {
     [Activity]
     public class HomeView
-        : MvxActivityView
+        : BaseView
     {
         public new HomeViewModel ViewModel
         {

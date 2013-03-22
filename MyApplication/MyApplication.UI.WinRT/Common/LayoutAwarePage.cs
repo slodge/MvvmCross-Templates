@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using Cirrious.MvvmCross.WinRT.Views;
-using Windows.Foundation;
+using Cirrious.MvvmCross.WindowsStore.Views;
 using Windows.Foundation.Collections;
 using Windows.System;
 using Windows.UI.Core;
@@ -12,7 +10,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
-namespace MyApplication.UI.WinRT.Common
+namespace MyApplication.UI.WindowsStore.Common
 {
     /// <summary>
     /// Typical implementation of Page that provides several important conveniences:
@@ -35,7 +33,7 @@ namespace MyApplication.UI.WinRT.Common
     /// </list>
     /// </summary>
     [Windows.Foundation.Metadata.WebHostHidden]
-    public class LayoutAwarePage : MvxWinRTPage
+    public class LayoutAwarePage : MvxStorePage
     {
         /// <summary>
         /// Identifies the <see cref="DefaultViewModel"/> dependency property.
