@@ -19,13 +19,26 @@ namespace MyApplication.UI.Touch
 		public HomeView () : base ("HomeView", null)
 		{
 		}
-				
+
+		public class TableViewSource : MvxSimpleTableViewSource
+		{
+			public TableViewSource (UITableView source, string nibName)
+				: base (source, nibName)
+			{				
+			}
+
+			public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
+			{
+				return 64;
+			}
+		}
+
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
-			var tableSource = new MvxSimpleTableViewSource(ResultsTable, "SimpleItem");
+			var tableSource = new TableViewSource(ResultsTable, "SimpleItem");
 			this.ResultsTable.Source = tableSource;
 
 			this.Bind( KeyTextField, (HomeViewModel vm) => vm.Key );
