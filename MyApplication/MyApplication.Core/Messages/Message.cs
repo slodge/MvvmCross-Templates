@@ -2,9 +2,9 @@
 
 namespace MyApplication.Core.Messages
 {
-    public class BaseMessage : MvxMessage
+    public class Message : MvxMessage
     {
-        public BaseMessage(object sender) 
+        public Message(object sender) 
             : base(sender)
         {
         }

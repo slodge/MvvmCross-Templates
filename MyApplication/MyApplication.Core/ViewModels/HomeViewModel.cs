@@ -6,7 +6,7 @@ using MyApplication.Core.Services.First;
 
 namespace MyApplication.Core.ViewModels
 {
-    public class HomeViewModel : BaseViewModel
+    public class HomeViewModel : ViewModel
     {
         private string _key;
         public string Key
@@ -26,7 +26,7 @@ namespace MyApplication.Core.ViewModels
         {
             get
             {
-                return new MvxRelayCommand(DoFetchItems);
+                return new MvxCommand(DoFetchItems);
             }
         }
 

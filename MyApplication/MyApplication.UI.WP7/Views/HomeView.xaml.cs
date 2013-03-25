@@ -6,12 +6,6 @@ namespace MyApplication.UI.WP7.Views
     public partial class HomeView
         : BaseView
     {
-        public new HomeViewModel ViewModel
-        {
-            get { return (HomeViewModel)base.ViewModel; }
-            set { base.ViewModel = value; }
-        }
-
         public HomeView()
         {
             InitializeComponent();

@@ -4,10 +4,10 @@ using MyApplication.Core.Services.Error;
 
 namespace MyApplication.Core.ViewModels
 {
-    public class BaseViewModel 
+    public abstract class ViewModel 
         : MvxViewModel
     {
-        public BaseViewModel()
+        protected ViewModel()
         {
             AppTrace.Trace("Creating ViewModel : {0}", GetType().Name);
         }

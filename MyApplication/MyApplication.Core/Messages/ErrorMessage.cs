@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MyApplication.Core.Messages
 {
-    public class ErrorMessage : BaseMessage
+    public class ErrorMessage : Message
     {
         public string Message { get; private set; }
 

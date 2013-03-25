@@ -50,7 +50,7 @@ namespace MyApplication.Core
         private void InitialiseStartNavigation()
         {
             AppTrace.Trace("Initialising start navigation");
-            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<HomeViewModel>());
+            RegisterAppStart<HomeViewModel>();
         }
     }
 }

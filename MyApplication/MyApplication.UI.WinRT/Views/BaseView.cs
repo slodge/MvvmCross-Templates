@@ -3,9 +3,9 @@ using MyApplication.UI.WindowsStore.Common;
 
 namespace MyApplication.UI.WindowsStore.Views
 {
-    public class BaseView : LayoutAwarePage
+    public abstract class BaseView : LayoutAwarePage
     {
-        public BaseView()
+        protected BaseView()
         {
             AppTrace.Trace("Creating View {0}", GetType().Name);
         }
