@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1536</int>
-		<string key="IBDocument.SystemVersion">12C3006</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
-		<string key="IBDocument.AppKitVersion">1187.34</string>
-		<string key="IBDocument.HIToolboxVersion">625.00</string>
+		<int key="IBDocument.SystemTarget">1552</int>
+		<string key="IBDocument.SystemVersion">12D78</string>
+		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
+		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">1930</string>
+			<string key="NS.object.0">2083</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
@@ -42,7 +42,7 @@
 							<object class="IBUILabel" id="717943124">
 								<reference key="NSNextResponder" ref="36135121"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 13}, {280, 24}}</string>
+								<string key="NSFrame">{{20, 4}, {280, 24}}</string>
 								<reference key="NSSuperview" ref="36135121"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="517937926"/>
@@ -77,7 +77,7 @@
 							<object class="IBUILabel" id="517937926">
 								<reference key="NSNextResponder" ref="36135121"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 43}, {280, 21}}</string>
+								<string key="NSFrame">{{20, 34}, {280, 21}}</string>
 								<reference key="NSSuperview" ref="36135121"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="1023219824"/>
@@ -105,10 +105,9 @@
 							<object class="IBUILabel" id="1023219824">
 								<reference key="NSNextResponder" ref="36135121"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 72}, {280, 21}}</string>
+								<string key="NSFrame">{{20, 63}, {280, 21}}</string>
 								<reference key="NSSuperview" ref="36135121"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -132,7 +131,7 @@
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{320, 108}</string>
+						<string key="NSFrameSize">{320, 84}</string>
 						<reference key="NSSuperview" ref="951121919"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="717943124"/>
@@ -148,14 +147,14 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 109}</string>
+				<string key="NSFrameSize">{320, 85}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="36135121"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<reference key="IBUIContentView" ref="36135121"/>
-				<real value="109" key="IBUIRowHeight"/>
+				<real value="85" key="IBUIRowHeight"/>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -282,7 +281,7 @@
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1536" key="NS.object.0"/>
+			<real value="1552" key="NS.object.0"/>
 		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
@@ -290,6 +289,6 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
-		<string key="IBCocoaTouchPluginVersion">1930</string>
+		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>
 </archive>

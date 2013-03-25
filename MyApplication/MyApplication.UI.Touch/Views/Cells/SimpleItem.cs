@@ -13,24 +13,13 @@ namespace MyApplication.UI.Touch
 		public SimpleItem (IntPtr handle)
 			: base(handle)
 		{
-		}
-
-		bool _done;
-
-		public override object DataContext{
-			get { return base.DataContext; }
-			set {
-				base.DataContext = value;
-				if (!_done) {
-					this.AddBindings (
-						new Dictionary<object, string>() {
-						{ this.TextLabel, "Text Title" },
-						{ this.BodyLabel, "Text Notes" },
-						{ this.DateLabel, "Text When,Converter=TimeAgo" },
-					});
-					_done = true;
-				}
-			}
+			this.DelayBind(() => 
+				this.AddBindings (
+							new Dictionary<object, string>() {
+							{ this.TextLabel, "Text Title" },
+							{ this.BodyLabel, "Text Notes" },
+							{ this.DateLabel, "Text When,Converter=TimeAgo" },
+						}));
 		}
 	}
 }
