@@ -28,12 +28,29 @@ namespace MyApplication.UI.Touch
 			var tableSource = new MvxSimpleTableViewSource(ResultsTable, "SimpleItem");
 			this.ResultsTable.Source = tableSource;
 
-		    this.Bind(this.KeyTextField, (HomeViewModel vm) => vm.Key);
-		    this.Bind(this.FetchButton, (HomeViewModel vm) => vm.FetchItemsCommand);
-		    this.Bind(tableSource, (HomeViewModel vm) => vm.Items);
+			this.Bind( KeyTextField, (HomeViewModel vm) => vm.Key );
+			this.Bind( FetchButton, (HomeViewModel vm) => vm.FetchItemsCommand );
+			this.Bind( tableSource, (HomeViewModel vm) => vm.Items );
+
+			// alternative approach would be:
+			//this.AddBindings (
+			//	new Dictionary<object,string> ()
+			//    {
+			//		{ this.KeyTextField, "Text Key" },
+			//		{ this.FetchButton, "TouchUpInside FetchItemsCommand" },
+			//		{ tableSource, "ItemsSource Items" }
+			//	});
 
 			this.ResultsTable.ReloadData ();
+
+			// UI only concerns
+			this.FetchButton.TouchUpInside += (s,e) => ClearKeyboard(); 
+			this.View.AddGestureRecognizer(new UITapGestureRecognizer(ClearKeyboard));
+		}
+
+		private void ClearKeyboard()
+		{
+			KeyTextField.ResignFirstResponder();
 		}
 	}
 }
-
