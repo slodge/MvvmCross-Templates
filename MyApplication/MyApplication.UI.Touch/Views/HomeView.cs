@@ -41,9 +41,9 @@ namespace MyApplication.UI.Touch
 			var tableSource = new TableViewSource(ResultsTable, "SimpleItem");
 			this.ResultsTable.Source = tableSource;
 
-			this.Bind( KeyTextField, (HomeViewModel vm) => vm.Key );
-			this.Bind( FetchButton, (HomeViewModel vm) => vm.FetchItemsCommand );
-			this.Bind( tableSource, (HomeViewModel vm) => vm.Items );
+			this.CreateBinding( KeyTextField).To((HomeViewModel vm) => vm.Key ).Apply();
+			this.CreateBinding( FetchButton).To( (HomeViewModel vm) => vm.FetchItemsCommand ).Apply();
+			this.CreateBinding( tableSource).To( (HomeViewModel vm) => vm.Items ).Apply();
 
 			// alternative approach would be:
 			//this.AddBindings (

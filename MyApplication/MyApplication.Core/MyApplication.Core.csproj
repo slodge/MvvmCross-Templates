@@ -53,7 +53,6 @@
     <Compile Include="Messages\Message.cs" />
     <Compile Include="Messages\ErrorMessage.cs" />
     <Compile Include="Services\Error\ErrorService.cs" />
-    <Compile Include="Converters\Converters.cs" />
     <Compile Include="Converters\TimeAgoConverter.cs" />
     <Compile Include="Services\First\FirstServiceError.cs" />
     <Compile Include="Services\Error\IErrorService.cs" />
@@ -66,10 +65,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\..\libs\Mvx\Portable\\Cirrious.CrossCore.dll</HintPath>
+      <HintPath>..\..\libs\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\..\libs\Mvx\Portable\\Cirrious.MvvmCross.dll</HintPath>
+      <HintPath>..\..\libs\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

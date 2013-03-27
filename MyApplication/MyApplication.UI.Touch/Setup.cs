@@ -29,13 +29,6 @@ namespace MyApplication.UI.Touch
             return app;
         }
 
-		protected override void FillValueConverters(IMvxValueConverterRegistry registry)
-        {
-            base.FillValueConverters(registry);
-
-            var filler = new MvxInstanceBasedValueConverterRegistryFiller(registry);
-            filler.AddFieldConverters(typeof(Converters));
-        }
 
 		protected override void AddPluginsLoaders(MvxLoaderPluginRegistry registry)
 		{

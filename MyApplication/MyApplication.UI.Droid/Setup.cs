@@ -21,15 +21,11 @@ namespace MyApplication.UI.Droid
             return new App();
         }
 
-        protected override IEnumerable<Type> ValueConverterHolders
-        {
-            get { return new[] {typeof (Converters)}; }
-        }
-
         protected override void InitializeLastChance()
         {
             var errorDisplayer = new ErrorDisplay();
-            Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
+			Cirrious.MvvmCross.Plugins.File.PluginLoader.Instance.EnsureLoaded();
+			Cirrious.MvvmCross.Plugins.DownloadCache.PluginLoader.Instance.EnsureLoaded();
             base.InitializeLastChance();
         }
 
