@@ -20,25 +20,13 @@ namespace MyApplication.UI.Touch
 		{
 		}
 
-		public class TableViewSource : MvxSimpleTableViewSource
-		{
-			public TableViewSource (UITableView source, string nibName)
-				: base (source, nibName)
-			{				
-			}
-
-			public override float GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
-			{
-				return 64;
-			}
-		}
-
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
-			var tableSource = new TableViewSource(ResultsTable, "SimpleItem");
+			var tableSource = new MvxSimpleTableViewSource(ResultsTable, "SimpleItem");
+			ResultsTable.RowHeight = 69;
 			this.ResultsTable.Source = tableSource;
 
 			this.CreateBinding( KeyTextField).To((HomeViewModel vm) => vm.Key ).Apply();

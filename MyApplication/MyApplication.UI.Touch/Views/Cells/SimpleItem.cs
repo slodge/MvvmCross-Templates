@@ -10,16 +10,27 @@ namespace MyApplication.UI.Touch
 	[Register("SimpleItem")]
 	public partial class SimpleItem : MvxTableViewCell
 	{
+		public SimpleItem ()
+			: base()
+		{
+			Initialise();
+		}
+
 		public SimpleItem (IntPtr handle)
 			: base(handle)
 		{
+			Initialise();
+		}
+
+		private void Initialise()
+		{
 			this.DelayBind(() => 
-				this.AddBindings (
-							new Dictionary<object, string>() {
-							{ this.TextLabel, "Text Title" },
-							{ this.BodyLabel, "Text Notes" },
-							{ this.DateLabel, "Text When,Converter=TimeAgo" },
-						}));
+			               this.AddBindings (
+				new Dictionary<object, string>() {
+				{ this.TitleLabel, "Text Title" },
+				{ this.BodyLabel, "Text Notes" },
+				{ this.DateLabel, "Text When,Converter=TimeAgo" },
+			}));
 		}
 	}
 }
