@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Cirrious.CrossCore.IoC;
+using Cirrious.CrossCore;
 using Cirrious.MvvmCross.ViewModels;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
